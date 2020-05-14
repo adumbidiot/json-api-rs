@@ -1,5 +1,5 @@
 [package]
-name = "json-api"
+name = "json_api"
 version = "0.0.1"
 authors = [ "adumbidiot <nathaniel.daniel23@outlook.com>" ]
 edition = "2018"

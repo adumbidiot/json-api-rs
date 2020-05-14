@@ -62,7 +62,8 @@ mod tests {
 
     #[test]
     fn parse_resource_object() {
-        let _resource_object: ResourceObject = serde_json::from_str(RESOURCE_OBJECT_JSON).unwrap();
+        let _resource_object: ResourceObject<serde_json::Value> =
+            serde_json::from_str(RESOURCE_OBJECT_JSON).unwrap();
         // TODO: Compare values
     }
 }

@@ -1,23 +1,20 @@
 //! A basic client api for [JSON API](https://jsonapi.org/).
 
-pub mod types;
+mod types;
 
-pub use crate::types::{JsonDocument, LinksObject, ResourceObject};
+pub use crate::types::JsonDocument;
+pub use crate::types::LinksObject;
+pub use crate::types::ResourceObject;
 
-pub type JsonResult<T> = Result<T, JsonError>;
-
-#[derive(Debug)]
-pub enum JsonError {
-    Reqwest(reqwest::Error),
-    InvalidStatus(reqwest::StatusCode),
+/// The library error type
+#[derive(Debug, thiserror::Error)]
+pub enum Error {
+    /// Reqwest HTTP error
+    #[error(transparent)]
+    Reqwest(#[from] reqwest::Error),
 }
 
-impl From<reqwest::Error> for JsonError {
-    fn from(e: reqwest::Error) -> JsonError {
-        Self::Reqwest(e)
-    }
-}
-
+/// A Json:Api Client
 #[derive(Default)]
 pub struct Client {
     client: reqwest::Client,
@@ -33,18 +30,14 @@ impl Client {
     pub async fn get_json_document<D: serde::de::DeserializeOwned>(
         &self,
         url: &str,
-    ) -> JsonResult<JsonDocument<D>> {
+    ) -> Result<JsonDocument<D>, Error> {
         let res = self
             .client
             .get(url)
             .header(reqwest::header::ACCEPT, "application/vnd.api+json")
             .send()
-            .await?;
-        let status = res.status();
-
-        if !status.is_success() {
-            return Err(JsonError::InvalidStatus(status));
-        }
+            .await?
+            .error_for_status()?;
 
         Ok(res.json().await?)
     }

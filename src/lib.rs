@@ -25,7 +25,7 @@ mod tests {
     #[test]
     fn parse_resource_object() {
         let _resource_object: ResourceObject<serde_json::Value> =
-            serde_json::from_str(RESOURCE_OBJECT_JSON).unwrap();
+            serde_json::from_str(RESOURCE_OBJECT_JSON).expect("failed to parse resource object");
         // TODO: Compare values
     }
 }

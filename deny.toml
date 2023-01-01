@@ -1,8 +1,7 @@
 targets = [
     { triple = "x86_64-unknown-linux-gnu" },
-    { triple = "x86_64-unknown-linux-musl" },
-    { triple = "x86_64-apple-darwin" },
     { triple = "x86_64-pc-windows-msvc" },
+    { triple = "aarch64-unknown-linux-gnu" },
 ]
 
 [advisories]
@@ -18,7 +17,7 @@ allow-osi-fsf-free = "neither"
 confidence-threshold = 0.93
 default = "deny"
 private = { ignore = true }
-allow = [ "Apache-2.0", "MIT", "BSD-3-Clause", "Unicode-DFS-2016" ]
+allow = [ "Apache-2.0", "MIT", "BSD-3-Clause", "Unicode-DFS-2016", "MPL-2.0", "ISC", "OpenSSL" ]
 exceptions = []
 
 [[licenses.clarify]]

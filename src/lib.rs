@@ -2,11 +2,7 @@
 
 pub mod types;
 
-pub use crate::types::{
-    JsonDocument,
-    LinksObject,
-    ResourceObject,
-};
+pub use crate::types::{JsonDocument, LinksObject, ResourceObject};
 
 pub type JsonResult<T> = Result<T, JsonError>;
 

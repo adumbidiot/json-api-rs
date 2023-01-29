@@ -3,7 +3,7 @@ use crate::JsonDocument;
 use reqwest::header::HeaderValue;
 
 /// A Json:Api Client
-#[derive(Default)]
+#[derive(Default, Clone)]
 pub struct Client {
     client: reqwest::Client,
 }

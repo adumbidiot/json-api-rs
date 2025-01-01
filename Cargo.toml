@@ -5,14 +5,14 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-reqwest = { version = "0.12.9", features = [ "json" ], default-features = false }
-serde = { version = "1.0.214", features = [ "derive" ] }
-serde_json = "1.0.132"
-thiserror = "2.0.0"
-url = { version = "2.5.3", features = [ "serde" ] }
+reqwest = { version = "0.12.12", features = [ "json" ], default-features = false }
+serde = { version = "1.0.217", features = [ "derive" ] }
+serde_json = "1.0.134"
+thiserror = "2.0.9"
+url = { version = "2.5.4", features = [ "serde" ] }
 
 [dev-dependencies]
-tokio = { version = "1.41.1", features = [ "macros" ] }
+tokio = { version = "1.42.0", features = [ "macros" ] }
 
 [features]
 default = [ "rustls-tls" ]

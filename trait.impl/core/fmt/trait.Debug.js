@@ -1,0 +1,9 @@
+(function() {
+    const implementors = Object.fromEntries([["json_api",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.95.0/core/fmt/trait.Debug.html\" title=\"trait core::fmt::Debug\">Debug</a> for <a class=\"enum\" href=\"json_api/enum.Error.html\" title=\"enum json_api::Error\">Error</a>",0],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.95.0/core/fmt/trait.Debug.html\" title=\"trait core::fmt::Debug\">Debug</a> for <a class=\"struct\" href=\"json_api/struct.LinksObject.html\" title=\"struct json_api::LinksObject\">LinksObject</a>",0],["impl&lt;A: <a class=\"trait\" href=\"https://doc.rust-lang.org/1.95.0/core/fmt/trait.Debug.html\" title=\"trait core::fmt::Debug\">Debug</a>&gt; <a class=\"trait\" href=\"https://doc.rust-lang.org/1.95.0/core/fmt/trait.Debug.html\" title=\"trait core::fmt::Debug\">Debug</a> for <a class=\"struct\" href=\"json_api/struct.ResourceObject.html\" title=\"struct json_api::ResourceObject\">ResourceObject</a>&lt;A&gt;",0],["impl&lt;D: <a class=\"trait\" href=\"https://doc.rust-lang.org/1.95.0/core/fmt/trait.Debug.html\" title=\"trait core::fmt::Debug\">Debug</a>&gt; <a class=\"trait\" href=\"https://doc.rust-lang.org/1.95.0/core/fmt/trait.Debug.html\" title=\"trait core::fmt::Debug\">Debug</a> for <a class=\"struct\" href=\"json_api/struct.JsonDocument.html\" title=\"struct json_api::JsonDocument\">JsonDocument</a>&lt;D&gt;",0]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":59,"fragment_lengths":[1348]}

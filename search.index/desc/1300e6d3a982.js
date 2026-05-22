@@ -1,0 +1,1 @@
+rd_("AaMake a new ClientAoReturns the argument unchanged.0000BaCalls <code>U::from(self)</code>.0000dSpec00AfThe library error type111AaA Json:Api ClientAbReqwest HTTP error33B`A basic client api for JSON API.4AdA Links Object. SpecAeA Json Document. SpecAgA Resource Object. SpecAcGet a json document")
